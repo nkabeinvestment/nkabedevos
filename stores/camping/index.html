@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trailhead Outfitters | Camping Gear</title>
+  <link rel="stylesheet" href="../../assets/store.css" />
+  <style>
+    :root { --brand: #22c55e; --brand-dark: #16a34a; --brand-fg: #052014; }
+    .hero h1 { color: #bbf7d0; }
+  </style>
+</head>
+<body data-store="camping" data-currency="$">
+  <header class="topbar">
+    <div class="container">
+      <a class="logo" href="#">Trail<span>head</span> Outfitters</a>
+      <nav>
+        <a href="#shelter">Tents</a>
+        <a href="#sleep">Sleep</a>
+        <a href="#cook">Cooking</a>
+        <a href="#light">Light &amp; Safety</a>
+      </nav>
+      <button class="cart-btn" id="cart-open">🛒 <span class="cart-count" data-cart-count style="display:none">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Tents · Sleeping · Cooking · Safety</p>
+      <h1>Gear up for the wild</h1>
+      <p>Everything you need for the perfect campout — lightweight, durable, and adventure-tested.</p>
+      <div class="cta">
+        <a class="btn primary" href="#shelter">Shop tents</a>
+        <a class="btn ghost" href="#cook">Cooking gear</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="shelter">
+    <div class="container">
+      <div class="section-head"><h2>Tents &amp; Shelters</h2><p>Weatherproof homes away from home.</p></div>
+      <div id="product-grid-s" class="grid" data-grid data-products="products-s"></div>
+    </div>
+  </section>
+
+  <section id="sleep">
+    <div class="container">
+      <div class="section-head"><h2>Sleep Systems</h2><p>Bags, pads, and pillows for deep rest.</p></div>
+      <div id="product-grid-b" class="grid" data-grid data-products="products-b"></div>
+    </div>
+  </section>
+
+  <section id="cook">
+    <div class="container">
+      <div class="section-head"><h2>Camp Cooking</h2><p>Stoves, cookware, and coolers.</p></div>
+      <div id="product-grid-c" class="grid" data-grid data-products="products-c"></div>
+    </div>
+  </section>
+
+  <section id="light">
+    <div class="container">
+      <div class="section-head"><h2>Light &amp; Safety</h2><p>Be visible. Be prepared.</p></div>
+      <div id="product-grid-l" class="grid" data-grid data-products="products-l"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>© Trailhead Outfitters · Storefront demo</span>
+      <a href="../../index.html">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your Cart</h3>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-items" id="cart-items"></div>
+    <p class="drawer-empty" id="cart-empty" style="display:none">Your cart is empty.</p>
+    <div class="drawer-foot">
+      <div class="drawer-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="checkout" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <script type="application/json" id="products-s">[
+    { "id": 1, "name": "Summit 2-Person Tent", "category": "Tents", "price": 129.0, "icon": "⛺", "tag": "Bestseller", "desc": "Freestanding 2P tent, 4-season rated." },
+    { "id": 2, "name": "Family Dome Tent 6P", "category": "Tents", "price": 219.0, "icon": "🏕️", "desc": "Spacious dome with full rainfly and vestibule." },
+    { "id": 3, "name": "Tarp Shelter", "category": "Tents", "price": 39.99, "icon": "🌧️", "desc": "Lightweight tarp + poles for fast setup." }
+  ]</script>
+  <script type="application/json" id="products-b">[
+    { "id": 4, "name": "Down Sleeping Bag (-5°C)", "category": "Sleep", "price": 149.0, "icon": "🛏️", "desc": "650-fill down, mummy cut, compressible." },
+    { "id": 5, "name": "Self-Inflating Pad", "category": "Sleep", "price": 64.5, "icon": "🫁", "desc": "Foam + air combo pad with R-value 3.8." },
+    { "id": 6, "name": "Camp Pillow", "category": "Sleep", "price": 19.99, "icon": "🛌", "desc": "Packable inflatable pillow, brushed cover." }
+  ]</script>
+  <script type="application/json" id="products-c">[
+    { "id": 7, "name": "Twin-Burner Stove", "category": "Cooking", "price": 89.0, "icon": "🍳", "desc": "2-burner stove, windscreen, igniter." },
+    { "id": 8, "name": "Cookware Set (3pc)", "category": "Cooking", "price": 54.99, "icon": "🍲", "desc": "Nesting pots, pan, and kettle." },
+    { "id": 9, "name": "Soft Cooler 20L", "category": "Cooking", "price": 46.0, "icon": "🧊", "desc": "Leakproof, holds ice up to 24h." }
+  ]</script>
+  <script type="application/json" id="products-l">[
+    { "id": 10, "name": "Rechargeable Headlamp", "category": "Lighting", "price": 34.99, "icon": "🔦", "desc": "400 lumens, USB-C rechargeable." },
+    { "id": 11, "name": "LED Lantern", "category": "Lighting", "price": 29.5, "icon": "🏮", "desc": "360° glow, dimmable, hook loop." },
+    { "id": 12, "name": "First-Aid Kit", "category": "Safety", "price": 24.99, "icon": "⛑️", "desc": "Trail-ready kit in a dry pouch." }
+  ]</script>
+
+  <script src="../../assets/store.js"></script>
+</body>
+</html>

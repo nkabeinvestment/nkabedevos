@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoCare Motors | Auto Shop</title>
+  <link rel="stylesheet" href="../../assets/store.css" />
+  <style>
+    :root { --brand: #f97316; --brand-dark: #ea580c; --brand-fg: #1a1106; }
+    .hero h1 { color: #ffd29e; }
+  </style>
+</head>
+<body data-store="auto" data-currency="$">
+  <header class="topbar">
+    <div class="container">
+      <a class="logo" href="#">Auto<span>Care</span> Motors</a>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#inventory">Used Cars</a>
+        <a href="#parts">Parts &amp; Tires</a>
+        <a href="#">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cart-open">🛒 <span class="cart-count" data-cart-count style="display:none">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Maintenance · Repair · Sales</p>
+      <h1>Full-service Auto Care &amp; Reliable Used Cars</h1>
+      <p>Routine maintenance, tire services, engine overhauling, custom spray paint, and a quality-certified used car lot.</p>
+      <div class="cta">
+        <a class="btn primary" href="#services">Book a service</a>
+        <a class="btn ghost" href="#inventory">Shop used cars</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <div class="container">
+      <div class="section-head">
+        <h2>Our Services</h2>
+        <p>Expert mechanics, genuine parts, and honest workmanship.</p>
+      </div>
+      <div class="services">
+        <div class="service"><div class="icon">🔧</div><h3>Maintenance</h3><p>Oil changes, inspections, brake and fluid services.</p></div>
+        <div class="service"><div class="icon">🛞</div><h3>Tire Repair &amp; Fitting</h3><p>Flat repairs, balancing, alignment, and new tires.</p></div>
+        <div class="service"><div class="icon">⚙️</div><h3>Engine Overhauling</h3><p>Complete rebuilds, head gaskets, and diagnostics.</p></div>
+        <div class="service"><div class="icon">🎨</div><h3>Car Spray Service</h3><p>Custom color, touch-ups, and full resprays.</p></div>
+        <div class="service"><div class="icon">🚗</div><h3>Used Car Sales</h3><p>Certified pre-owned vehicles with 12-month warranty.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="inventory">
+    <div class="container">
+      <div class="section-head">
+        <h2>Used Car Inventory</h2>
+        <p>Hand-inspected, service history included.</p>
+      </div>
+      <div id="car-grid" class="grid"></div>
+    </div>
+  </section>
+
+  <section id="parts">
+    <div class="container">
+      <div class="section-head">
+        <h2>Parts &amp; Accessories</h2>
+        <p>Genuine parts and gear available online.</p>
+      </div>
+      <div id="product-grid" class="grid" data-grid data-products="products"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>© AutoCare Motors · Storefront demo</span>
+      <a href="../../index.html">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your Cart</h3>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-items" id="cart-items"></div>
+    <p class="drawer-empty" id="cart-empty" style="display:none">Your cart is empty.</p>
+    <div class="drawer-foot">
+      <div class="drawer-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="checkout" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <script type="application/json" id="products">[
+    { "id": 1, "name": "Performance Oil Filter", "category": "Maintenance", "price": 24.99, "icon": "🛢️", "desc": "High-flow filter for every oil change." },
+    { "id": 2, "name": "All-Season Tire 205/55 R16", "category": "Tires", "price": 89.0, "icon": "🛞", "desc": "Balanced grip and long tread life." },
+    { "id": 3, "name": "Brake Pad Set (Front)", "category": "Brakes", "price": 54.5, "icon": "🛑", "desc": "Low-dust ceramic pads for smooth stops." },
+    { "id": 4, "name": "Synthetic Engine Oil 5W-30", "category": "Maintenance", "price": 39.0, "icon": "🧴", "desc": "Full synthetic, 1L premium formula." },
+    { "id": 5, "name": "LED Headlight Bulbs (Pair)", "category": "Lighting", "price": 29.99, "icon": "💡", "desc": "Brighter, longer-lasting LED upgrade." },
+    { "id": 6, "name": "Car Spray Paint (Aerosol)", "category": "Spray", "price": 18.5, "icon": "🎨", "desc": "Glossy custom color in a can." }
+  ]</script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const cars = [
+        { "name": "2020 Toyota Corolla", "price": "$14,900", "tag": "Certified", "desc": "38k mi · Auto · 38 MPG · 12-mo warranty" },
+        { "name": "2018 Honda Civic", "price": "$12,400", "tag": "Certified", "desc": "52k mi · Auto · 42 MPG · New tires" },
+        { "name": "2017 Ford F-150", "price": "$18,700", "tag": "Truck", "desc": "4x4 · 85k mi · Towing package" },
+        { "name": "2019 Mazda CX-5", "price": "$16,300", "tag": "SUV", "desc": "45k mi · AWD · Leather interior" }
+      ];
+      const grid = document.getElementById("car-grid");
+      cars.forEach((c) => {
+        const card = document.createElement("article");
+        card.className = "card";
+        card.innerHTML =
+          '<div class="product-img">🚗<span class="tag">' + c.tag + "</span></div>" +
+          '<div class="card-body"><div class="cat">Used Car</div><h3>' + c.name + "</h3>" +
+          "<p>" + c.desc + "</p>" +
+          '<div class="row-split"><span class="price">' + c.price + "</span>" +
+          '<a class="add" href="#services" style="text-decoration:none">Contact us</a></div></div>';
+        grid.appendChild(card);
+      });
+    });
+  </script>
+  <script src="../../assets/store.js"></script>
+</body>
+</html>

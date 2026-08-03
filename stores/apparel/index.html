@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velvet &amp; Vogue | Apparel</title>
+  <link rel="stylesheet" href="../../assets/store.css" />
+  <style>
+    :root { --brand: #e879f9; --brand-dark: #c026d3; --brand-fg: #2a0a30; }
+    .hero h1 { color: #fbcfe8; }
+  </style>
+</head>
+<body data-store="apparel" data-currency="$">
+  <header class="topbar">
+    <div class="container">
+      <a class="logo" href="#">Velvet <span>&amp;</span> Vogue</a>
+      <nav>
+        <a href="#women">Women</a>
+        <a href="#men">Men</a>
+        <a href="#jewelry">Jewelry</a>
+        <a href="#">Contact</a>
+      </nav>
+      <button class="cart-btn" id="cart-open">🛒 <span class="cart-count" data-cart-count style="display:none">0</span></button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <p class="eyebrow">Clothing · Garments · Jewelry</p>
+      <h1>Fashion that fits your story</h1>
+      <p>Curated clothing, quality garments, and hand-finished jewelry — shipped worldwide.</p>
+      <div class="cta">
+        <a class="btn primary" href="#women">Shop women</a>
+        <a class="btn ghost" href="#men">Shop men</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="women">
+    <div class="container">
+      <div class="section-head"><h2>Women</h2><p>Dresses, tops, and everyday essentials.</p></div>
+      <div id="product-grid-w" class="grid" data-grid data-products="products-w"></div>
+    </div>
+  </section>
+
+  <section id="men">
+    <div class="container">
+      <div class="section-head"><h2>Men</h2><p>Shirts, jackets, and staples.</p></div>
+      <div id="product-grid-m" class="grid" data-grid data-products="products-m"></div>
+    </div>
+  </section>
+
+  <section id="jewelry">
+    <div class="container">
+      <div class="section-head"><h2>Jewelry</h2><p>Gold, silver, and gemstone pieces.</p></div>
+      <div id="product-grid-j" class="grid" data-grid data-products="products-j"></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <span>© Velvet &amp; Vogue · Storefront demo</span>
+      <a href="../../index.html">← Back to portfolio</a>
+    </div>
+  </footer>
+
+  <div class="drawer-overlay" id="cart-overlay"></div>
+  <aside class="drawer" id="cart-drawer" aria-label="Shopping cart">
+    <div class="drawer-head">
+      <h3>Your Cart</h3>
+      <button class="drawer-close" id="cart-close" aria-label="Close cart">✕</button>
+    </div>
+    <div class="drawer-items" id="cart-items"></div>
+    <p class="drawer-empty" id="cart-empty" style="display:none">Your cart is empty.</p>
+    <div class="drawer-foot">
+      <div class="drawer-total"><span>Total</span><span id="cart-total">$0.00</span></div>
+      <button class="checkout" id="checkout">Checkout</button>
+    </div>
+  </aside>
+
+  <script type="application/json" id="products-w">[
+    { "id": 1, "name": "Silk Wrap Dress", "category": "Women", "price": 79.0, "icon": "👗", "desc": "Elegant knee-length wrap in premium silk blend." },
+    { "id": 2, "name": "Tailored Blazer", "category": "Women", "price": 95.5, "icon": "🧥", "desc": "Slim-fit blazer with a flattering cut." },
+    { "id": 3, "name": "Classic White Shirt", "category": "Women", "price": 42.0, "icon": "👔", "desc": "Crisp cotton poplin, relaxed fit." },
+    { "id": 4, "name": "Ribbed Knit Top", "category": "Women", "price": 34.99, "icon": "👚", "desc": "Soft stretch knit in seasonal colors." }
+  ]</script>
+  <script type="application/json" id="products-m">[
+    { "id": 5, "name": "Oxford Button-Down", "category": "Men", "price": 48.0, "icon": "👕", "desc": "Timeless oxford shirt, wrinkle-resistant." },
+    { "id": 6, "name": "Denim Trucker Jacket", "category": "Men", "price": 88.0, "icon": "🧥", "desc": "Classic denim jacket, medium wash." },
+    { "id": 7, "name": "Slim Chinos", "category": "Men", "price": 56.5, "icon": "👖", "desc": "Stretch chinos, wrinkle-free finish." },
+    { "id": 8, "name": "Graphic Tee (Pack of 3)", "category": "Men", "price": 39.99, "icon": "👕", "desc": "Soft cotton tees with original prints." }
+  ]</script>
+  <script type="application/json" id="products-j">[
+    { "id": 9, "name": "14k Gold Pendant", "category": "Jewelry", "price": 149.0, "icon": "📿", "desc": "Minimal gold pendant with 18in chain." },
+    { "id": 10, "name": "Pearl Stud Earrings", "category": "Jewelry", "price": 59.5, "icon": "💎", "desc": "Freshwater pearls on sterling posts." },
+    { "id": 11, "name": "Silver Bracelet", "category": "Jewelry", "price": 44.99, "icon": "⌚", "desc": "Hand-polished sterling silver link bracelet." },
+    { "id": 12, "name": "Gemstone Ring", "category": "Jewelry", "price": 129.0, "icon": "💍", "desc": "Amethyst or topaz set in sterling." }
+  ]</script>
+
+  <script src="../../assets/store.js"></script>
+</body>
+</html>
