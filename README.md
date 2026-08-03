@@ -8,9 +8,25 @@ runnable sample apps. Hosted free on GitHub Pages.
 | Path                     | What it is                                      | Runs where       |
 | ------------------------ | ----------------------------------------------- | ---------------- |
 | `index.html`             | Portfolio landing page (cards link to demos)    | Live site        |
+| `stores/auto-shop/`      | Auto shop storefront (services + used cars + parts) | Live site    |
+| `stores/apparel/`        | Apparel storefront (clothing, garments, jewelry) | Live site       |
+| `stores/camping/`        | Camping gear storefront (tents, sleep, cooking)  | Live site       |
 | `apps/vanilla-todo/`     | Todo app — pure HTML/CSS/JS + localStorage      | Live site        |
 | `apps/react-counter/`    | React app (hooks) loaded via CDN, no build step | Live site        |
 | `api-demo/`              | Node/Express API sample                         | Locally only     |
+
+### Storefront features
+
+All three storefronts (shared code in `assets/store.css`, `assets/store.js`,
+`assets/store-auth.js`, `assets/store-checkout.js`) include:
+
+- Product grids + a **working cart** (add/remove, saved to `localStorage`)
+- **Customer accounts** — create account / sign in (browser demo)
+- **Stripe-style demo checkout** — test card `4242 4242 4242 4242`, order confirmation
+- **Per-user order history** via the account menu
+- No backend — runs entirely on GitHub Pages
+
+See `SUBMISSION.md` for Upwork portfolio text, demo credentials, and screenshots.
 
 ## Deploy to GitHub Pages (one-time setup)
 

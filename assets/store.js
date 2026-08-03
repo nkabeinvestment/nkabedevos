@@ -196,14 +196,14 @@
     document.getElementById("cart-overlay").addEventListener("click", () => toggleDrawer(false));
     document.getElementById("checkout").addEventListener("click", () => {
       if (!Object.keys(state.items).length) return toast("Your cart is empty");
-      state.items = {};
-      save();
-      renderCart();
-      toggleDrawer(false);
-      toast("Order placed (demo) 🎉");
+      window.dispatchEvent(new CustomEvent("checkout-requested"));
     });
     document.addEventListener("keydown", (e) => {
       if (e.key === "Escape") toggleDrawer(false);
+    });
+    window.addEventListener("cart:updated", () => {
+      state.items = load();
+      renderCart();
     });
   }
 
