@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dev Portfolio | Live Demos</title>
+  <meta name="description" content="A live sandbox hosting work samples and demo apps, built for sharing with clients." />
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">Upwork Portfolio Sandbox</p>
+      <h1>Hello, I'm <span class="highlight">Your Name</span></h1>
+      <p class="tagline">Web Developer &amp; Designer — building fast, clean, usable experiences.</p>
+      <p class="sub">
+        This is a live demo hub. Click a project below to open a working sample, or view the source to see exactly how it's built.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <section class="container" id="projects">
+      <h2>Sample Apps</h2>
+      <p class="muted">Each card is a real, runnable project. No login, no setup — click to preview.</p>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-badge vanilla">Vanilla JS</div>
+          <h3>Todo List App</h3>
+          <p>Add, complete, and filter tasks. Pure HTML/CSS/JavaScript with local persistence.</p>
+          <a class="btn" href="apps/vanilla-todo/index.html">Open demo</a>
+          <a class="btn ghost" href="apps/vanilla-todo/index.html" target="_blank" rel="noopener">New tab</a>
+        </article>
+
+        <article class="card">
+          <div class="card-badge react">React</div>
+          <h3>React Counter</h3>
+          <p>Component-driven state with hooks — bundled via CDN, no build step required.</p>
+          <a class="btn" href="apps/react-counter/index.html">Open demo</a>
+          <a class="btn ghost" href="apps/react-counter/index.html" target="_blank" rel="noopener">New tab</a>
+        </article>
+
+        <article class="card">
+          <div class="card-badge node">Node / Express</div>
+          <h3>API Server Demo</h3>
+          <p>Backend sample. Express endpoints with JSON — run it locally (not hosted on Pages).</p>
+          <a class="btn" href="api-demo/README.md">View docs</a>
+          <a class="btn ghost" href="#api" data-scroll>How to run</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="container" id="stack">
+      <h2>What's included</h2>
+      <div class="chips">
+        <span class="chip">HTML</span>
+        <span class="chip">CSS</span>
+        <span class="chip">JavaScript</span>
+        <span class="chip">React</span>
+        <span class="chip">Node.js</span>
+        <span class="chip">Express</span>
+        <span class="chip">GitHub Pages</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Built as a sandbox for client work samples. Replace this copy with your own projects.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+</html>

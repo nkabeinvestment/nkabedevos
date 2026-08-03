@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>React Counter Demo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>React Counter</h1>
+    <p class="hint">
+      A small React app using hooks (<code>useState</code>) — loaded via CDN, no build step.
+    </p>
+
+    <div id="root"></div>
+
+    <p class="back"><a href="../../index.html">&larr; Back to portfolio</a></p>
+  </main>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel">
+    function App() {
+      const [count, setCount] = React.useState(0);
+      const steps = [1, 5, 10];
+
+      return (
+        <div className="card">
+          <div className="count" aria-live="polite">{count}</div>
+          <p className="muted">Current value</p>
+
+          <div className="controls">
+            <button onClick={() => setCount((c) => c - 1)}>-1</button>
+            <button onClick={() => setCount((c) => c + 1)}>+1</button>
+          </div>
+
+          <div className="steps">
+            {steps.map((n) => (
+              <button key={n} onClick={() => setCount((c) => c + n)}>
+                +{n}
+              </button>
+            ))}
+          </div>
+
+          <button className="reset" onClick={() => setCount(0)}>Reset</button>
+
+          <div className="meta">
+            <span>{count === 0 ? "Neutral" : count > 0 ? "Positive" : "Negative"}</span>
+            <span>{count % 2 === 0 ? "Even" : "Odd"}</span>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+</body>
+</html>

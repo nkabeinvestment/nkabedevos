@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Todo List App | Vanilla JS</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <h1>Todo List</h1>
+    <p class="hint">Add tasks, mark them done, filter, and clear. Saved to your browser.</p>
+
+    <form id="todo-form" class="row">
+      <input id="todo-input" type="text" placeholder="What needs doing?" autocomplete="off" required />
+      <button type="submit">Add</button>
+    </form>
+
+    <div id="filters" class="filters">
+      <button data-filter="all" class="active">All</button>
+      <button data-filter="active">Active</button>
+      <button data-filter="completed">Done</button>
+    </div>
+
+    <ul id="todo-list" class="list"></ul>
+
+    <p id="empty" class="empty">No tasks yet — add one above.</p>
+
+    <div class="footer-row">
+      <span id="count">0 left</span>
+      <button id="clear" class="link-btn">Clear completed</button>
+    </div>
+
+    <p class="back"><a href="../../index.html">&larr; Back to portfolio</a></p>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
