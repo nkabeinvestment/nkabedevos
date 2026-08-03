@@ -93,6 +93,13 @@ h2 { font-size: 1.6rem; margin: 0 0 8px; }
 }
 .btn:hover { filter: brightness(1.1); }
 .btn.ghost { background: transparent; color: var(--muted); border: 1px solid rgba(255,255,255,.15); }
+.hero-cta { margin-top: 24px; }
+.btn.upwork {
+  background: linear-gradient(90deg, #14a800, #1fbf00);
+  color: #fff;
+  font-weight: 700;
+}
+.btn.upwork:hover { filter: brightness(1.08); }
 
 .chips { display: flex; flex-wrap: wrap; gap: 10px; }
 .chip {
