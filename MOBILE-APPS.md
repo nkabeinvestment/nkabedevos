@@ -53,7 +53,7 @@ mock data so demos never break.
 
 ## Notes for clients
 
-- Both are React 18 apps using Hooks — compiled in-browser (CDN Babel) so no build step
-  is needed to host them on GitHub Pages.
+- Both are React 18 apps (Hooks) — JSX is precompiled to plain JS (`app.js`) so they run
+  fast and reliably, with no build step or in-browser Babel needed at runtime.
 - Backend is a mock REST API; wire it to a database + auth to go production.
 - Full source is in this repository under `apps/uber-clone` and `apps/tutor-connect`.
