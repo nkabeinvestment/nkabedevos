@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admissions | Oakridge University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html" class="active">Admissions</a></li>
+        <li><a href="campus-life.html">Campus Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="page-header-bg">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1920&q=80" alt="Admissions" loading="eager">
+    </div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Admissions</div>
+      <h1>Admissions</h1>
+      <p>Your journey to Oakridge starts here. Discover how to join our community.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">By the Numbers</span>
+        <h2>Admissions Snapshot</h2>
+      </div>
+      <div class="stats-row" id="admissionsStats"></div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="deadlines">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Important Dates</span>
+        <h2>Application Deadlines</h2>
+        <p>Plan ahead and never miss a deadline.</p>
+      </div>
+      <div class="admissions-grid">
+        <div id="deadlinesList"></div>
+        <div>
+          <div class="card fade-up" style="background:var(--primary);color:var(--text-white);border-color:var(--primary)">
+            <h3 style="margin-bottom:16px">Ready to Apply?</h3>
+            <p style="color:rgba(255,255,255,.8);margin-bottom:24px">Our online application takes about 30 minutes. You can save your progress and return anytime.</p>
+            <a href="#" class="btn btn-primary btn-block" onclick="showToast('Application portal coming soon!','success')">Start Application</a>
+            <p style="color:rgba(255,255,255,.5);font-size:.8rem;margin-top:12px;text-align:center">Application fee: $75 (fee waivers available)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="requirements">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:48px">
+        <div class="fade-up">
+          <span class="section-label">Requirements</span>
+          <h2 style="font-size:2rem;font-weight:800;margin-bottom:20px">What You Need to Apply</h2>
+          <ul class="requirements-list" id="requirementsList"></ul>
+        </div>
+        <div class="fade-up fade-up-delay-1">
+          <img src="https://images.unsplash.com/photo-1427504494785-3a9ca7044f45?w=700&q=80" alt="Students on campus" style="border-radius:var(--radius);box-shadow:var(--shadow-lg)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="tuition">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Investment</span>
+        <h2>Tuition &amp; Fees</h2>
+        <p>Transparent pricing for a world-class education.</p>
+      </div>
+      <div style="max-width:700px;margin:0 auto">
+        <table class="tuition-table" id="tuitionTable" style="border-radius:var(--radius);overflow:hidden"></table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="scholarships">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Financial Aid</span>
+        <h2>Scholarships &amp; Aid</h2>
+        <p>62% of our students receive financial assistance. We make Oakridge accessible.</p>
+      </div>
+      <div id="scholarshipsGrid" class="program-grid" style="max-width:900px;margin:0 auto"></div>
+      <div style="text-align:center;margin-top:40px" id="financialAidInfo"></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-up">Your Future Starts<br><span style="color:var(--accent)">at Oakridge</span></h2>
+      <p class="fade-up fade-up-delay-1">Have questions? Our admissions team is here to help every step of the way.</p>
+      <div class="fade-up fade-up-delay-2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary btn-lg">Contact Admissions</a>
+        <a href="#" class="btn btn-ghost btn-lg" onclick="showToast('Virtual tour coming soon!','success')">Virtual Tour</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a><p>A world-class institution dedicated to excellence in teaching, research, and community impact since 1892.</p></div>
+        <div class="footer-col"><h4>Academics</h4><ul><li><a href="academics.html">All Programs</a></li><li><a href="academics.html#cs">Computer Science</a></li><li><a href="academics.html#business">Business</a></li><li><a href="academics.html#engineering">Engineering</a></li></ul></div>
+        <div class="footer-col"><h4>Admissions</h4><ul><li><a href="admissions.html">How to Apply</a></li><li><a href="admissions.html#tuition">Tuition & Aid</a></li><li><a href="admissions.html#deadlines">Deadlines</a></li><li><a href="admissions.html#scholarships">Scholarships</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:admissions@oakridge.edu">admissions@oakridge.edu</a></li><li><a href="tel:+15551234567">+1 (555) 123-4567</a></li><li><a href="#">Oakridge, CA 94025</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Oakridge University. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">YouTube</a></div></div>
+    </div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      const result = await CollegeAPI.getAdmissions();
+      if (!result || !result.data) return;
+      const d = result.data;
+      const s = d.stats;
+
+      document.getElementById('admissionsStats').innerHTML = `
+        <div class="stat-card fade-up"><span class="number">${s.acceptanceRate}%</span><span class="label">Acceptance Rate</span></div>
+        <div class="stat-card fade-up fade-up-delay-1"><span class="number">${(s.applicants/1000).toFixed(1)}K</span><span class="label">Applicants (2026)</span></div>
+        <div class="stat-card fade-up fade-up-delay-2"><span class="number">${s.averageSAT}</span><span class="label">Average SAT</span></div>
+        <div class="stat-card fade-up fade-up-delay-3"><span class="number">${s.averageGPA}</span><span class="label">Average GPA</span></div>
+      `;
+
+      document.getElementById('deadlinesList').innerHTML = `
+        <div class="events-list">${d.deadlines.map(dl => {
+          const dp = formatDateParts(dl.date);
+          return `<div class="event-card fade-up">
+            <div class="event-date-box"><span class="month">${dp.month}</span><span class="day">${dp.day}</span><span class="year">${dp.year}</span></div>
+            <div class="event-content"><h3>${dl.type}</h3><p>${dl.description}</p><div class="event-meta"><span>&#128197; ${formatDate(dl.date)}</span></div></div>
+          </div>`;
+        }).join('')}</div>
+      `;
+
+      document.getElementById('requirementsList').innerHTML = d.requirements.map(r => `<li>${r}</li>`).join('');
+
+      const t = d.tuition.undergraduate;
+      document.getElementById('tuitionTable').innerHTML = `
+        <thead><tr><th>Cost Category</th><th>Amount (per year)</th></tr></thead>
+        <tbody>
+          <tr><td>Tuition</td><td>$${t.tuition.toLocaleString()}</td></tr>
+          <tr><td>Room & Board</td><td>$${t.roomBoard.toLocaleString()}</td></tr>
+          <tr><td>Fees</td><td>$${t.fees.toLocaleString()}</td></tr>
+          <tr><td style="font-weight:700">Total Cost of Attendance</td><td style="font-weight:700;color:var(--accent)">$${t.total.toLocaleString()}</td></tr>
+        </tbody>
+      `;
+
+      document.getElementById('scholarshipsGrid').innerHTML = d.financialAid.scholarships.map(sch => `
+        <div class="scholarship-card fade-up">
+          <h4>${sch.name}</h4>
+          <div class="amount">${sch.amount}</div>
+          <p>${sch.criteria}</p>
+        </div>
+      `).join('');
+
+      document.getElementById('financialAidInfo').innerHTML = `
+        <div class="fade-up" style="text-align:center;padding:24px;background:var(--bg-white);border:1px solid var(--border);border-radius:var(--radius);max-width:500px;margin:0 auto">
+          <p style="font-size:1.1rem;font-weight:700;color:var(--primary);margin-bottom:4px">${d.financialAid.percentageReceiving}% of students receive aid</p>
+          <p style="color:var(--text-body);font-size:.9rem">Average financial aid package: <strong>$${d.financialAid.averagePackage.toLocaleString()}/year</strong></p>
+        </div>
+      `;
+
+      setTimeout(() => initScrollAnimations(), 100);
+    });
+  </script>
+</body>
+</html>

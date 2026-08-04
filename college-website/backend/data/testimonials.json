@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "name": "Alex Thompson",
+    "major": "Computer Science, Class of 2025",
+    "text": "Oakridge gave me the foundation to land my dream job at a top tech company. The professors genuinely care about your success.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200"
+  },
+  {
+    "id": 2,
+    "name": "Priya Sharma",
+    "major": "Business Administration, Class of 2024",
+    "text": "The entrepreneurship program helped me launch my startup before graduation. We raised $500K in seed funding.",
+    "image": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200"
+  },
+  {
+    "id": 3,
+    "name": "Marcus Williams",
+    "major": "Engineering, Class of 2023",
+    "text": "The robotics lab is world-class. I presented my research at three international conferences as an undergrad.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200"
+  }
+]

@@ -1,0 +1,101 @@
+{
+  "stats": [
+    {
+      "number": "8,200",
+      "label": "Students"
+    },
+    {
+      "number": "450+",
+      "label": "Faculty"
+    },
+    {
+      "number": "120+",
+      "label": "Student Clubs"
+    },
+    {
+      "number": "350",
+      "label": "Acres Campus"
+    }
+  ],
+  "housing": [
+    {
+      "name": "Freshman Dormitories",
+      "description": "Modern suite-style living for first-year students with communal lounges and study spaces.",
+      "image": "https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600"
+    },
+    {
+      "name": "Upper-Class Residences",
+      "description": "Apartment-style housing for sophomores through seniors with full kitchens.",
+      "image": "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600"
+    },
+    {
+      "name": "Graduate Housing",
+      "description": "Affordable family-friendly and individual apartments near campus.",
+      "image": "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?w=600"
+    }
+  ],
+  "clubs": [
+    {
+      "name": "Computer Science Society",
+      "category": "academic",
+      "members": 320
+    },
+    {
+      "name": "Debate & Moot Court",
+      "category": "academic",
+      "members": 85
+    },
+    {
+      "name": "A Cappella Group",
+      "category": "arts",
+      "members": 45
+    },
+    {
+      "name": "Student Government",
+      "category": "leadership",
+      "members": 60
+    },
+    {
+      "name": "Intramural Sports League",
+      "category": "sports",
+      "members": 800
+    },
+    {
+      "name": "Sustainability Collective",
+      "category": "community",
+      "members": 200
+    },
+    {
+      "name": "Entrepreneurship Club",
+      "category": "academic",
+      "members": 150
+    },
+    {
+      "name": "International Students Association",
+      "category": "community",
+      "members": 400
+    }
+  ],
+  "facilities": [
+    {
+      "name": "Oakridge Library",
+      "description": "State-of-the-art library with 2 million+ volumes, 24/7 study spaces, and digital media labs.",
+      "icon": "&#128218;"
+    },
+    {
+      "name": "Recreation Center",
+      "description": "Olympic pool, climbing wall, fitness center, and outdoor adventure programs.",
+      "icon": "&#127947;"
+    },
+    {
+      "name": "Innovation Hub",
+      "description": "Makerspace with 3D printers, laser cutters, and prototyping equipment.",
+      "icon": "&#128295;"
+    },
+    {
+      "name": "Student Union",
+      "description": "Dining halls, cafés, book store, and event spaces in the heart of campus.",
+      "icon": "&#127970;"
+    }
+  ]
+}

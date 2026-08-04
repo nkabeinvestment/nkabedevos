@@ -1,0 +1,16 @@
+﻿.fade-up{opacity:0;transform:translateY(30px);transition:opacity .6s ease,transform .6s ease}
+.fade-up.visible{opacity:1;transform:translateY(0)}
+.fade-up-delay-1{transition-delay:.1s}
+.fade-up-delay-2{transition-delay:.2s}
+.fade-up-delay-3{transition-delay:.3s}
+.fade-up-delay-4{transition-delay:.4s}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes fadeIn{from{opacity:0}to{opacity:1}}
+@keyframes slideInLeft{from{opacity:0;transform:translateX(-30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes slideInRight{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes scaleIn{from{opacity:0;transform:scale(.9)}to{opacity:1;transform:scale(1)}}
+.animate-float{animation:float 3s ease-in-out infinite}
+.animate-fadeIn{animation:fadeIn .6s ease forwards}
+.animate-slideLeft{animation:slideInLeft .6s ease forwards}
+.animate-slideRight{animation:slideInRight .6s ease forwards}
+.animate-scaleIn{animation:scaleIn .6s ease forwards}

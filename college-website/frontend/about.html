@@ -1,0 +1,172 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Oakridge University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus-life.html">Campus Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="page-header-bg">
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80" alt="About Oakridge" loading="eager">
+    </div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> About</div>
+      <h1>About Oakridge University</h1>
+      <p>More than a century of shaping leaders, innovators, and global citizens.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center">
+        <div class="fade-up">
+          <span class="section-label">Our Story</span>
+          <h2 style="font-size:2.2rem;font-weight:800;margin-bottom:16px">Founded in 1892,<br>Building the Future</h2>
+          <p style="color:var(--text-body);line-height:1.8;margin-bottom:16px">Oakridge University was established with a bold vision: to create a place where brilliant minds could come together to push the boundaries of knowledge and make a meaningful difference in the world.</p>
+          <p style="color:var(--text-body);line-height:1.8;margin-bottom:16px">What began as a small liberal arts college on 50 acres of California coastline has grown into a world-renowned research university spanning 350 acres with 8 schools, 200+ research centers, and partnerships on every continent.</p>
+          <p style="color:var(--text-body);line-height:1.8">Today, our 35,000+ alumni include Nobel laureates, Fortune 500 CEOs, Pulitzer Prize winners, and leaders in every field imaginable.</p>
+        </div>
+        <div class="fade-up fade-up-delay-1">
+          <img src="https://images.unsplash.com/photo-1562774053-701939374585?w=700&q=80" alt="Oakridge campus" style="border-radius:var(--radius);box-shadow:var(--shadow-lg)">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Mission</span>
+        <h2>Mission, Vision &amp; Values</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:32px">
+        <div class="card fade-up" style="text-align:center">
+          <div class="card-icon" style="margin:0 auto 20px">&#127919;</div>
+          <h3>Mission</h3>
+          <p>To educate future leaders through rigorous academics, groundbreaking research, and a commitment to service that transforms communities and advances human understanding.</p>
+        </div>
+        <div class="card fade-up fade-up-delay-1" style="text-align:center">
+          <div class="card-icon" style="margin:0 auto 20px">&#128065;</div>
+          <h3>Vision</h3>
+          <p>To be the world's most impactful university — where diverse perspectives converge to solve humanity's greatest challenges and create a more equitable, sustainable future.</p>
+        </div>
+        <div class="card fade-up fade-up-delay-2" style="text-align:center">
+          <div class="card-icon" style="margin:0 auto 20px">&#10084;</div>
+          <h3>Values</h3>
+          <p>Excellence, Integrity, Innovation, Inclusion, and Impact. These five pillars guide every decision we make as an institution and as individuals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Leadership</span>
+        <h2>Meet Our Faculty</h2>
+        <p>World-renowned researchers, industry experts, and dedicated mentors.</p>
+      </div>
+      <div class="faculty-grid" id="facultyGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">By the Numbers</span>
+        <h2>Oakridge at a Glance</h2>
+      </div>
+      <div class="stats-row">
+        <div class="stat-card fade-up">
+          <span class="number" data-count="35000" data-suffix="+">0</span>
+          <span class="label">Alumni Worldwide</span>
+        </div>
+        <div class="stat-card fade-up fade-up-delay-1">
+          <span class="number" data-count="380" data-prefix="$" data-suffix="M">0</span>
+          <span class="label">Annual Research Funding</span>
+        </div>
+        <div class="stat-card fade-up fade-up-delay-2">
+          <span class="number" data-count="200" data-suffix="+">0</span>
+          <span class="label">Research Centers</span>
+        </div>
+        <div class="stat-card fade-up fade-up-delay-3">
+          <span class="number" data-count="45" data-suffix="">0</span>
+          <span class="label">Study Abroad Countries</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-up">Become Part of<br>Our <span style="color:var(--accent)">Legacy</span></h2>
+      <p class="fade-up fade-up-delay-1">Whether you're a prospective student, researcher, or community partner, there's a place for you at Oakridge.</p>
+      <div class="fade-up fade-up-delay-2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="admissions.html" class="btn btn-primary btn-lg">Apply Now</a>
+        <a href="contact.html" class="btn btn-ghost btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a>
+          <p>A world-class institution dedicated to excellence in teaching, research, and community impact since 1892.</p>
+        </div>
+        <div class="footer-col"><h4>Academics</h4><ul><li><a href="academics.html">All Programs</a></li><li><a href="academics.html#cs">Computer Science</a></li><li><a href="academics.html#business">Business</a></li><li><a href="academics.html#engineering">Engineering</a></li></ul></div>
+        <div class="footer-col"><h4>Admissions</h4><ul><li><a href="admissions.html">How to Apply</a></li><li><a href="admissions.html#tuition">Tuition & Aid</a></li><li><a href="admissions.html#deadlines">Deadlines</a></li><li><a href="admissions.html#scholarships">Scholarships</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:admissions@oakridge.edu">admissions@oakridge.edu</a></li><li><a href="tel:+15551234567">+1 (555) 123-4567</a></li><li><a href="#">Oakridge, CA 94025</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Oakridge University. All rights reserved.</span>
+        <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">YouTube</a></div>
+      </div>
+    </div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      const faculty = await CollegeAPI.getFaculty();
+      if (faculty && faculty.data) {
+        const grid = document.getElementById('facultyGrid');
+        grid.innerHTML = faculty.data.map(f => `
+          <div class="faculty-card fade-up">
+            <div class="faculty-card-img"><img src="${f.image}" alt="${f.name}" loading="lazy"></div>
+            <h3>${f.name}</h3>
+            <div class="role">${f.title}</div>
+            <div class="specialty">${f.specialty}</div>
+            <div class="bio">${f.bio}</div>
+          </div>
+        `).join('');
+        setTimeout(() => initScrollAnimations(), 100);
+      }
+    });
+  </script>
+</body>
+</html>

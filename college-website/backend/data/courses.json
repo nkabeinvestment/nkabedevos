@@ -1,0 +1,199 @@
+[
+  {
+    "id": 1,
+    "department": "Computer Science",
+    "code": "CS",
+    "courses": [
+      {
+        "id": 101,
+        "name": "Introduction to Computer Science",
+        "code": "CS 101",
+        "credits": 3,
+        "level": "intro",
+        "description": "Fundamentals of computing, algorithms, and problem-solving with Python.",
+        "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600"
+      },
+      {
+        "id": 102,
+        "name": "Data Structures & Algorithms",
+        "code": "CS 201",
+        "credits": 4,
+        "level": "intermediate",
+        "description": "Arrays, trees, graphs, sorting, and searching algorithms with practical applications.",
+        "image": "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600"
+      },
+      {
+        "id": 103,
+        "name": "Machine Learning",
+        "code": "CS 380",
+        "credits": 3,
+        "level": "advanced",
+        "description": "Supervised and unsupervised learning, neural networks, and real-world AI applications.",
+        "image": "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600"
+      },
+      {
+        "id": 104,
+        "name": "Web Development",
+        "code": "CS 250",
+        "credits": 3,
+        "level": "intermediate",
+        "description": "Full-stack web development with modern frameworks, REST APIs, and databases.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600"
+      },
+      {
+        "id": 105,
+        "name": "Cybersecurity Fundamentals",
+        "code": "CS 310",
+        "credits": 3,
+        "level": "advanced",
+        "description": "Network security, encryption, ethical hacking, and digital forensics.",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "department": "Business Administration",
+    "code": "BA",
+    "courses": [
+      {
+        "id": 201,
+        "name": "Principles of Management",
+        "code": "BA 101",
+        "credits": 3,
+        "level": "intro",
+        "description": "Organizational behavior, leadership, strategic planning, and decision-making.",
+        "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600"
+      },
+      {
+        "id": 202,
+        "name": "Financial Accounting",
+        "code": "BA 201",
+        "credits": 3,
+        "level": "intermediate",
+        "description": "Financial statements, bookkeeping, and accounting principles for business.",
+        "image": "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600"
+      },
+      {
+        "id": 203,
+        "name": "Marketing Analytics",
+        "code": "BA 305",
+        "credits": 3,
+        "level": "advanced",
+        "description": "Data-driven marketing, consumer behavior analysis, and digital marketing strategy.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600"
+      },
+      {
+        "id": 204,
+        "name": "Entrepreneurship",
+        "code": "BA 250",
+        "credits": 3,
+        "level": "intermediate",
+        "description": "Startup fundamentals, business model canvas, and venture funding strategies.",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "department": "Engineering",
+    "code": "EN",
+    "courses": [
+      {
+        "id": 301,
+        "name": "Engineering Mechanics",
+        "code": "EN 101",
+        "credits": 4,
+        "level": "intro",
+        "description": "Statics, dynamics, and fundamental engineering principles.",
+        "image": "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600"
+      },
+      {
+        "id": 302,
+        "name": "Circuit Analysis",
+        "code": "EN 202",
+        "credits": 3,
+        "level": "intermediate",
+        "description": "Electric circuits, AC analysis, and semiconductor fundamentals.",
+        "image": "https://images.unsplash.com/photo-1518770660439-4636190af475?w=600"
+      },
+      {
+        "id": 303,
+        "name": "Robotics & Automation",
+        "code": "EN 350",
+        "credits": 3,
+        "level": "advanced",
+        "description": "Robot kinematics, control systems, and industrial automation.",
+        "image": "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "department": "Liberal Arts",
+    "code": "LA",
+    "courses": [
+      {
+        "id": 401,
+        "name": "Creative Writing",
+        "code": "LA 110",
+        "credits": 3,
+        "level": "intro",
+        "description": "Fiction, poetry, and creative nonfiction workshop with peer critique.",
+        "image": "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=600"
+      },
+      {
+        "id": 402,
+        "name": "Psychology of Human Behavior",
+        "code": "LA 220",
+        "credits": 3,
+        "level": "intermediate",
+        "description": "Cognitive psychology, social dynamics, and behavioral science research.",
+        "image": "https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600"
+      },
+      {
+        "id": 403,
+        "name": "Global History & Culture",
+        "code": "LA 310",
+        "credits": 3,
+        "level": "advanced",
+        "description": "World civilizations, cultural exchange, and historical perspectives.",
+        "image": "https://images.unsplash.com/photo-1461360370896-922624d12a3e?w=600"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "department": "Natural Sciences",
+    "code": "NS",
+    "courses": [
+      {
+        "id": 501,
+        "name": "Biology: Life Sciences",
+        "code": "NS 101",
+        "credits": 4,
+        "level": "intro",
+        "description": "Cell biology, genetics, evolution, and ecology fundamentals.",
+        "image": "https://images.unsplash.com/photo-1530026405186-ed1f139313f8?w=600"
+      },
+      {
+        "id": 502,
+        "name": "Organic Chemistry",
+        "code": "NS 201",
+        "credits": 4,
+        "level": "intermediate",
+        "description": "Carbon compounds, reaction mechanisms, and lab techniques.",
+        "image": "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=600"
+      },
+      {
+        "id": 503,
+        "name": "Quantum Physics",
+        "code": "NS 305",
+        "credits": 3,
+        "level": "advanced",
+        "description": "Quantum mechanics, wave-particle duality, and modern physics.",
+        "image": "https://images.unsplash.com/photo-1635070041078-e363dbe005cb?w=600"
+      }
+    ]
+  }
+]

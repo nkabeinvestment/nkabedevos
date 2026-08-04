@@ -1,0 +1,208 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campus Life | Oakridge University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus-life.html" class="active">Campus Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="page-header-bg">
+      <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=1920&q=80" alt="Campus Life" loading="eager">
+    </div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Campus Life</div>
+      <h1>Campus Life</h1>
+      <p>Experience a vibrant community where learning extends far beyond the classroom.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">At a Glance</span>
+        <h2>Life at Oakridge</h2>
+      </div>
+      <div class="stats-row" id="lifeStats"></div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="events">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">What's Happening</span>
+        <h2>Upcoming Events</h2>
+        <p>From academic symposiums to cultural festivals, there's always something happening.</p>
+      </div>
+      <div class="filter-tabs" id="eventFilters">
+        <button class="filter-tab active" data-cat="all">All Events</button>
+        <button class="filter-tab" data-cat="academic">Academic</button>
+        <button class="filter-tab" data-cat="social">Social</button>
+        <button class="filter-tab" data-cat="career">Career</button>
+        <button class="filter-tab" data-cat="arts">Arts</button>
+        <button class="filter-tab" data-cat="admissions">Admissions</button>
+      </div>
+      <div class="events-list" id="eventsList"></div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="housing">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Where You'll Live</span>
+        <h2>Student Housing</h2>
+        <p>Comfortable, modern residences designed for community and convenience.</p>
+      </div>
+      <div class="program-grid" id="housingGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-cream" id="clubs">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Get Involved</span>
+        <h2>Student Organizations</h2>
+        <p>With 120+ clubs, there's something for everyone.</p>
+      </div>
+      <div id="clubsList" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark" id="facilities">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">World-Class</span>
+        <h2>Campus Facilities</h2>
+        <p>State-of-the-art spaces built for learning, wellness, and community.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px" id="facilitiesGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-white" id="tour">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Explore</span>
+        <h2>Virtual Campus Tour</h2>
+        <p>Can't visit in person? Take a virtual tour of our beautiful 350-acre campus.</p>
+      </div>
+      <div class="tour-grid" id="tourGrid"></div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-up">Experience Oakridge<br><span style="color:var(--accent)">For Yourself</span></h2>
+      <p class="fade-up fade-up-delay-1">Schedule a campus visit or attend an open house to see what makes Oakridge special.</p>
+      <div class="fade-up fade-up-delay-2" style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap">
+        <a href="contact.html" class="btn btn-primary btn-lg">Schedule a Visit</a>
+        <a href="admissions.html" class="btn btn-ghost btn-lg">Apply Now</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a><p>A world-class institution dedicated to excellence in teaching, research, and community impact since 1892.</p></div>
+        <div class="footer-col"><h4>Academics</h4><ul><li><a href="academics.html">All Programs</a></li><li><a href="academics.html#cs">Computer Science</a></li><li><a href="academics.html#business">Business</a></li><li><a href="academics.html#engineering">Engineering</a></li></ul></div>
+        <div class="footer-col"><h4>Admissions</h4><ul><li><a href="admissions.html">How to Apply</a></li><li><a href="admissions.html#tuition">Tuition & Aid</a></li><li><a href="admissions.html#deadlines">Deadlines</a></li><li><a href="admissions.html#scholarships">Scholarships</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:admissions@oakridge.edu">admissions@oakridge.edu</a></li><li><a href="tel:+15551234567">+1 (555) 123-4567</a></li><li><a href="#">Oakridge, CA 94025</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Oakridge University. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">YouTube</a></div></div>
+    </div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      const result = await CollegeAPI.getCampusLife();
+      if (!result || !result.data) return;
+      const d = result.data;
+
+      document.getElementById('lifeStats').innerHTML = d.stats.map((s, i) => `
+        <div class="stat-card fade-up fade-up-delay-${i}"><span class="number">${s.number}</span><span class="label">${s.label}</span></div>
+      `).join('');
+
+      document.getElementById('housingGrid').innerHTML = d.housing.map((h, i) => `
+        <div class="program-card fade-up fade-up-delay-${i}">
+          <div class="program-card-img"><img src="${h.image}" alt="${h.name}" loading="lazy"></div>
+          <div class="program-card-body"><h3>${h.name}</h3><p>${h.description}</p></div>
+        </div>
+      `).join('');
+
+      const catColors = { academic: '#1B365D', arts: '#9333EA', sports: '#22C55E', leadership: '#C8A951', community: '#3B82F6' };
+      document.getElementById('clubsList').innerHTML = d.clubs.map(c => `
+        <div class="card fade-up" style="display:flex;align-items:center;gap:16px;padding:20px">
+          <div style="width:10px;height:10px;border-radius:50%;background:${catColors[c.category]||'#888'};flex-shrink:0"></div>
+          <div><h3 style="font-size:.95rem;margin-bottom:2px">${c.name}</h3><p style="font-size:.8rem;margin:0;color:var(--text-light)">${c.category.charAt(0).toUpperCase()+c.category.slice(1)} &bull; ${c.members} members</p></div>
+        </div>
+      `).join('');
+
+      document.getElementById('facilitiesGrid').innerHTML = d.facilities.map((f, i) => `
+        <div class="card fade-up fade-up-delay-${i}" style="text-align:center"><div class="card-icon" style="margin:0 auto 16px;font-size:1.8rem">${f.icon}</div><h3>${f.name}</h3><p>${f.description}</p></div>
+      `).join('');
+
+      const tour = await CollegeAPI.getVirtualTour();
+      if (tour && tour.data) {
+        document.getElementById('tourGrid').innerHTML = tour.data.map(t => `
+          <div class="tour-card fade-up"><img src="${t.image}" alt="${t.name}" loading="lazy"><div class="tour-card-overlay"><h3>${t.name}</h3><p>${t.description}</p></div></div>
+        `).join('');
+      }
+
+      const eventsResult = await CollegeAPI.getEvents({ upcoming: 'true' });
+      if (eventsResult && eventsResult.data) {
+        renderEvents(eventsResult.data);
+
+        document.querySelectorAll('#eventFilters .filter-tab').forEach(tab => {
+          tab.addEventListener('click', async function() {
+            document.querySelectorAll('#eventFilters .filter-tab').forEach(t => t.classList.remove('active'));
+            this.classList.add('active');
+            const cat = this.dataset.cat;
+            const params = { upcoming: 'true' };
+            if (cat !== 'all') params.category = cat;
+            const res = await CollegeAPI.getEvents(params);
+            if (res && res.data) renderEvents(res.data);
+          });
+        });
+      }
+
+      setTimeout(() => initScrollAnimations(), 100);
+    });
+
+    function renderEvents(events) {
+      const list = document.getElementById('eventsList');
+      list.innerHTML = events.map(e => {
+        const dp = formatDateParts(e.date);
+        return `<div class="event-card fade-up">
+          <div class="event-date-box"><span class="month">${dp.month}</span><span class="day">${dp.day}</span><span class="year">${dp.year}</span></div>
+          <div class="event-content"><h3>${e.title}</h3><p>${e.description}</p><div class="event-meta"><span>&#128205; ${e.location}</span><span>&#128336; ${e.time}</span><span>&#127991; ${e.category.charAt(0).toUpperCase()+e.category.slice(1)}</span></div></div>
+        </div>`;
+      }).join('');
+      setTimeout(() => initScrollAnimations(), 50);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Academics | Oakridge University</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html" class="active">Academics</a></li>
+        <li><a href="admissions.html">Admissions</a></li>
+        <li><a href="campus-life.html">Campus Life</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="admissions.html" class="nav-cta">Apply Now</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <section class="page-header">
+    <div class="page-header-bg">
+      <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=1920&q=80" alt="Academics at Oakridge" loading="eager">
+    </div>
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Academics</div>
+      <h1>Academic Programs</h1>
+      <p>Discover world-class programs across 8 schools and 50+ majors.</p>
+    </div>
+  </section>
+
+  <section class="section section-white">
+    <div class="container">
+      <div class="filter-tabs" id="deptFilters">
+        <button class="filter-tab active" data-dept="all">All Departments</button>
+      </div>
+      <div class="program-grid" id="coursesGrid"></div>
+      <div id="coursesLoader"><div class="loader"></div></div>
+    </div>
+  </section>
+
+  <section class="section section-cream">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Faculty</span>
+        <h2>Learn from the Best</h2>
+        <p>Our faculty are leaders in their fields, dedicated to mentoring the next generation.</p>
+      </div>
+      <div class="faculty-grid" id="facultyGrid"></div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Departments</span>
+        <h2>Five Schools of Excellence</h2>
+        <p>Each school brings together brilliant minds working on the frontier of knowledge.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px" id="deptCards">
+        <div class="card fade-up" style="text-align:center;cursor:pointer" onclick="filterCourses('CS')">
+          <div class="card-icon" style="margin:0 auto 16px">&#128187;</div>
+          <h3>Computer Science</h3>
+          <p>AI, Cybersecurity, Data Science &amp; Software Engineering</p>
+        </div>
+        <div class="card fade-up fade-up-delay-1" style="text-align:center;cursor:pointer" onclick="filterCourses('BA')">
+          <div class="card-icon" style="margin:0 auto 16px">&#128200;</div>
+          <h3>Business</h3>
+          <p>Finance, Marketing, Entrepreneurship &amp; Analytics</p>
+        </div>
+        <div class="card fade-up fade-up-delay-2" style="text-align:center;cursor:pointer" onclick="filterCourses('EN')">
+          <div class="card-icon" style="margin:0 auto 16px">&#9881;</div>
+          <h3>Engineering</h3>
+          <p>Mechanical, Electrical, Civil &amp; Robotics</p>
+        </div>
+        <div class="card fade-up fade-up-delay-3" style="text-align:center;cursor:pointer" onclick="filterCourses('LA')">
+          <div class="card-icon" style="margin:0 auto 16px">&#128214;</div>
+          <h3>Liberal Arts</h3>
+          <p>Writing, Psychology, History &amp; Philosophy</p>
+        </div>
+        <div class="card fade-up fade-up-delay-4" style="text-align:center;cursor:pointer" onclick="filterCourses('NS')">
+          <div class="card-icon" style="margin:0 auto 16px">&#128300;</div>
+          <h3>Natural Sciences</h3>
+          <p>Biology, Chemistry, Physics &amp; Environmental Science</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-up">Find Your<br><span style="color:var(--accent)">Perfect Program</span></h2>
+      <p class="fade-up fade-up-delay-1">With 50+ programs and flexible study options, your future starts here.</p>
+      <div class="fade-up fade-up-delay-2"><a href="admissions.html" class="btn btn-primary btn-lg">Start Your Application</a></div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand"><a href="index.html" class="nav-logo"><span class="logo-icon">OU</span>Oakridge<span class="accent">University</span></a><p>A world-class institution dedicated to excellence in teaching, research, and community impact since 1892.</p></div>
+        <div class="footer-col"><h4>Academics</h4><ul><li><a href="academics.html">All Programs</a></li><li><a href="academics.html#cs">Computer Science</a></li><li><a href="academics.html#business">Business</a></li><li><a href="academics.html#engineering">Engineering</a></li></ul></div>
+        <div class="footer-col"><h4>Admissions</h4><ul><li><a href="admissions.html">How to Apply</a></li><li><a href="admissions.html#tuition">Tuition & Aid</a></li><li><a href="admissions.html#deadlines">Deadlines</a></li><li><a href="admissions.html#scholarships">Scholarships</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Contact Us</a></li><li><a href="mailto:admissions@oakridge.edu">admissions@oakridge.edu</a></li><li><a href="tel:+15551234567">+1 (555) 123-4567</a></li><li><a href="#">Oakridge, CA 94025</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Oakridge University. All rights reserved.</span><div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Instagram</a><a href="#">YouTube</a></div></div>
+    </div>
+  </footer>
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let allCourses = [];
+    let departments = [];
+
+    async function loadCourses(dept) {
+      const grid = document.getElementById('coursesGrid');
+      const loader = document.getElementById('coursesLoader');
+      loader.style.display = 'block';
+      grid.innerHTML = '';
+
+      const params = {};
+      if (dept && dept !== 'all') params.department = dept;
+
+      const result = await CollegeAPI.getCourses(params);
+      loader.style.display = 'none';
+
+      if (result && result.data) {
+        allCourses = result.data;
+        if (result.departments) departments = result.departments;
+        renderCourses(result.data);
+      }
+    }
+
+    function renderCourses(courses) {
+      const grid = document.getElementById('coursesGrid');
+      grid.innerHTML = courses.map(c => `
+        <div class="program-card fade-up">
+          <div class="program-card-img">
+            <img src="${c.image}" alt="${c.name}" loading="lazy">
+          </div>
+          <div class="program-card-body">
+            <span class="program-card-dept">${c.department}</span>
+            <h3>${c.name}</h3>
+            <p>${c.description}</p>
+            <div class="program-card-meta">
+              <span>${c.code}</span>
+              <span>${c.credits} Credits</span>
+              <span style="text-transform:capitalize">${c.level}</span>
+            </div>
+          </div>
+        </div>
+      `).join('');
+      setTimeout(() => initScrollAnimations(), 100);
+    }
+
+    function filterCourses(dept) {
+      document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+      const tab = document.querySelector(`.filter-tab[data-dept="${dept}"]`);
+      if (tab) tab.classList.add('active');
+      loadCourses(dept);
+    }
+
+    document.addEventListener('DOMContentLoaded', async function() {
+      const deptResult = await CollegeAPI.getDepartments();
+      if (deptResult && deptResult.data) {
+        const filters = document.getElementById('deptFilters');
+        deptResult.data.forEach(d => {
+          const btn = document.createElement('button');
+          btn.className = 'filter-tab';
+          btn.dataset.dept = d.code;
+          btn.textContent = d.name;
+          btn.addEventListener('click', () => filterCourses(d.code));
+          filters.appendChild(btn);
+        });
+        filters.querySelector('[data-dept="all"]').addEventListener('click', () => filterCourses('all'));
+      }
+
+      loadCourses('all');
+
+      const faculty = await CollegeAPI.getFaculty();
+      if (faculty && faculty.data) {
+        const grid = document.getElementById('facultyGrid');
+        grid.innerHTML = faculty.data.map(f => `
+          <div class="faculty-card fade-up">
+            <div class="faculty-card-img"><img src="${f.image}" alt="${f.name}" loading="lazy"></div>
+            <h3>${f.name}</h3>
+            <div class="role">${f.title}</div>
+            <div class="specialty">${f.specialty}</div>
+            <div class="bio">${f.bio}</div>
+          </div>
+        `).join('');
+        setTimeout(() => initScrollAnimations(), 100);
+      }
+    });
+  </script>
+</body>
+</html>

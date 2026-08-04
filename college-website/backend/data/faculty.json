@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Dr. Sarah Chen",
+    "title": "Professor & Chair",
+    "department": "Computer Science",
+    "specialty": "Artificial Intelligence & Machine Learning",
+    "email": "s.chen@oakridge.edu",
+    "bio": "Former Google AI researcher with 15+ years in machine learning. Published 80+ papers in top-tier conferences.",
+    "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=400"
+  },
+  {
+    "id": 2,
+    "name": "Dr. James Mitchell",
+    "title": "Associate Professor",
+    "department": "Computer Science",
+    "specialty": "Cybersecurity",
+    "email": "j.mitchell@oakridge.edu",
+    "bio": "Cybersecurity expert and former NSA consultant. Leads the university Cyber Defense Lab.",
+    "image": "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400"
+  },
+  {
+    "id": 3,
+    "name": "Dr. Maria Rodriguez",
+    "title": "Professor",
+    "department": "Business Administration",
+    "specialty": "Finance & Economics",
+    "email": "m.rodriguez@oakridge.edu",
+    "bio": "Former Goldman Sachs VP turned educator. Specializes in fintech and financial modeling.",
+    "image": "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=400"
+  },
+  {
+    "id": 4,
+    "name": "Prof. David Kim",
+    "title": "Distinguished Professor",
+    "department": "Engineering",
+    "specialty": "Robotics & Mechatronics",
+    "email": "d.kim@oakridge.edu",
+    "bio": "IEEE Fellow. Holds 12 patents in robotic systems. Advisor to DARPA projects.",
+    "image": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400"
+  },
+  {
+    "id": 5,
+    "name": "Dr. Emily Watson",
+    "title": "Associate Professor",
+    "department": "Liberal Arts",
+    "specialty": "Creative Writing & Literature",
+    "email": "e.watson@oakridge.edu",
+    "bio": "Award-winning author of three novels. MFA from Iowa Writers Workshop.",
+    "image": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400"
+  },
+  {
+    "id": 6,
+    "name": "Dr. Robert Patel",
+    "title": "Professor",
+    "department": "Natural Sciences",
+    "specialty": "Quantum Physics",
+    "email": "r.patel@oakridge.edu",
+    "bio": "CERN alumni. Pioneering research in quantum computing at the university physics lab.",
+    "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400"
+  },
+  {
+    "id": 7,
+    "name": "Dr. Lisa Chang",
+    "title": "Assistant Professor",
+    "department": "Computer Science",
+    "specialty": "Data Science & Analytics",
+    "email": "l.chang@oakridge.edu",
+    "bio": "Data science leader with experience at Netflix and Spotify. Expert in recommendation systems.",
+    "image": "https://images.unsplash.com/photo-1594824476967-48c8b964ac31?w=400"
+  },
+  {
+    "id": 8,
+    "name": "Dr. Michael Okafor",
+    "title": "Professor",
+    "department": "Engineering",
+    "specialty": "Civil & Environmental Engineering",
+    "email": "m.okafor@oakridge.edu",
+    "bio": "Sustainable infrastructure expert. Led earthquake-resistant design projects in 5 countries.",
+    "image": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=400"
+  }
+]

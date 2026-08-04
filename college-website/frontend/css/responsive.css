@@ -1,0 +1,40 @@
+﻿@media(max-width:1024px){
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:24px}
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .admissions-grid{grid-template-columns:1fr}
+}
+@media(max-width:768px){
+  .nav-links{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:var(--primary-dark);flex-direction:column;align-items:center;justify-content:center;gap:24px;z-index:999}
+  .nav-links.open{display:flex}
+  .nav-toggle{display:flex}
+  .nav-toggle.active span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+  .nav-toggle.active span:nth-child(2){opacity:0}
+  .nav-toggle.active span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+  .hero{min-height:auto;padding:120px 0 60px}
+  .hero h1{font-size:2.2rem}
+  .hero-stats{grid-template-columns:repeat(2,1fr);gap:16px}
+  .hero-stat .number{font-size:1.6rem}
+  .program-grid{grid-template-columns:1fr}
+  .faculty-grid{grid-template-columns:1fr}
+  .testimonials-grid{grid-template-columns:1fr}
+  .stats-row{grid-template-columns:1fr}
+  .event-card{grid-template-columns:80px 1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .tour-grid{grid-template-columns:1fr}
+  .section{padding:60px 0}
+  .section-header{margin-bottom:40px}
+}
+@media(max-width:480px){
+  .hero h1{font-size:1.8rem}
+  .hero-sub{font-size:1rem}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+  .hero-stats{grid-template-columns:1fr 1fr}
+  .btn-lg{padding:14px 28px;font-size:.9rem}
+  .page-header{padding:120px 0 40px}
+  .page-header h1{font-size:1.8rem}
+}

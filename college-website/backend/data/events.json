@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Fall Open Campus Day",
+    "date": "2026-09-15",
+    "time": "9:00 AM - 4:00 PM",
+    "location": "Main Campus",
+    "category": "admissions",
+    "description": "Tour campus, meet faculty, attend sample lectures, and learn about financial aid.",
+    "image": "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=600"
+  },
+  {
+    "id": 2,
+    "title": "Annual Tech Innovation Summit",
+    "date": "2026-10-05",
+    "time": "10:00 AM - 6:00 PM",
+    "location": "Engineering Building",
+    "category": "academic",
+    "description": "Keynote by industry leaders, hackathon, and project showcase from CS and Engineering students.",
+    "image": "https://images.unsplash.com/photo-1540575467063-178a50c2df87?w=600"
+  },
+  {
+    "id": 3,
+    "title": "Homecoming Weekend",
+    "date": "2026-10-20",
+    "time": "All Day",
+    "location": "Campus-wide",
+    "category": "social",
+    "description": "Alumni reunion, football game, live music, and the famous Oakridge tailgate party.",
+    "image": "https://images.unsplash.com/photo-1461896836934-bd45ea8b2c8e?w=600"
+  },
+  {
+    "id": 4,
+    "title": "Spring Career Fair",
+    "date": "2027-03-10",
+    "time": "11:00 AM - 3:00 PM",
+    "location": "Student Center",
+    "category": "career",
+    "description": "Connect with 100+ employers from tech, finance, healthcare, and engineering industries.",
+    "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600"
+  },
+  {
+    "id": 5,
+    "title": "International Cultural Festival",
+    "date": "2026-11-12",
+    "time": "5:00 PM - 10:00 PM",
+    "location": "University Quad",
+    "category": "social",
+    "description": "Celebrate diversity with food, music, dance, and art from 40+ countries.",
+    "image": "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?w=600"
+  },
+  {
+    "id": 6,
+    "title": "Research Symposium",
+    "date": "2026-12-01",
+    "time": "9:00 AM - 5:00 PM",
+    "location": "Science Center",
+    "category": "academic",
+    "description": "Undergraduate and graduate students present cutting-edge research across all disciplines.",
+    "image": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?w=600"
+  },
+  {
+    "id": 7,
+    "title": "Spring Musical Production",
+    "date": "2027-04-18",
+    "time": "7:00 PM - 10:00 PM",
+    "location": "University Theater",
+    "category": "arts",
+    "description": "Student-directed musical theater production featuring original choreography and music.",
+    "image": "https://images.unsplash.com/photo-1507676184212-d03ab07a01bf?w=600"
+  },
+  {
+    "id": 8,
+    "title": "Business Plan Competition",
+    "date": "2027-02-22",
+    "time": "1:00 PM - 6:00 PM",
+    "location": "Business School Auditorium",
+    "category": "academic",
+    "description": "Students pitch startup ideas to real venture capitalists. $50K in prizes.",
+    "image": "https://images.unsplash.com/photo-1559136555-9303baea8ebd?w=600"
+  }
+]

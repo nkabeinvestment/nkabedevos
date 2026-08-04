@@ -1,0 +1,87 @@
+{
+  "stats": {
+    "applicants": 28500,
+    "accepted": 6200,
+    "enrolled": 2100,
+    "acceptanceRate": 21.7,
+    "averageGPA": 3.87,
+    "averageSAT": 1420,
+    "averageACT": 32
+  },
+  "deadlines": [
+    {
+      "id": 1,
+      "type": "Early Decision",
+      "date": "2026-11-01",
+      "description": "Binding early application for students certain about Oakridge."
+    },
+    {
+      "id": 2,
+      "type": "Early Action",
+      "date": "2026-11-15",
+      "description": "Non-binding early application with January notification."
+    },
+    {
+      "id": 3,
+      "type": "Regular Decision",
+      "date": "2027-01-05",
+      "description": "Standard application deadline for Fall 2027 enrollment."
+    },
+    {
+      "id": 4,
+      "type": "Transfer Application",
+      "date": "2027-03-01",
+      "description": "For students transferring from another college or university."
+    }
+  ],
+  "requirements": [
+    "Completed online application",
+    "Official high school transcripts",
+    "SAT or ACT scores",
+    "Two letters of recommendation",
+    "Personal essay",
+    "Extracurricular activities list",
+    "Application fee of $75 (waivers available)"
+  ],
+  "tuition": {
+    "undergraduate": {
+      "tuition": 54200,
+      "roomBoard": 16800,
+      "fees": 1200,
+      "total": 72200
+    },
+    "graduate": {
+      "tuition": 48500,
+      "roomBoard": 0,
+      "fees": 1500,
+      "total": 50000
+    }
+  },
+  "financialAid": {
+    "percentageReceiving": 62,
+    "averagePackage": 42000,
+    "workStudy": true,
+    "scholarships": [
+      {
+        "name": "Presidential Scholarship",
+        "amount": "Full tuition",
+        "criteria": "Top 1% of applicants, exceptional leadership"
+      },
+      {
+        "name": "Dean's Merit Award",
+        "amount": "$25,000/year",
+        "criteria": "Top 10% of admitted students"
+      },
+      {
+        "name": "STEM Excellence Award",
+        "amount": "$20,000/year",
+        "criteria": "Demonstrated STEM achievement"
+      },
+      {
+        "name": "Community Impact Grant",
+        "amount": "$15,000/year",
+        "criteria": "Significant community service record"
+      }
+    ]
+  }
+}
