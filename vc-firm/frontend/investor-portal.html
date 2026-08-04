@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Investor Portal | Apex Ventures</title>
+  <meta name="description" content="Apex Ventures Investor Portal - access your portfolio performance, fund documents, and reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav scrolled">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">AV</span>Apex<span class="gold">Ventures</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="investor-portal.html" class="nav-cta active">Investor Portal</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <!-- LOGIN SECTION -->
+  <div id="loginSection" style="display:none">
+    <div class="auth-container">
+      <div class="auth-card">
+        <h2>Investor <span class="gold">Portal</span></h2>
+        <p class="subtitle">Access your portfolio, fund documents, and performance reports.</p>
+        <div class="login-tabs">
+          <button class="login-tab active" data-tab="login">Sign In</button>
+          <button class="login-tab" data-tab="register">Create Account</button>
+        </div>
+        <div id="loginFormContainer">
+          <form id="loginForm">
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="demo@apexvc.com" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+          </form>
+          <p class="auth-footer">Demo: <strong>demo@apexvc.com</strong> / <strong>demo123</strong></p>
+        </div>
+        <div id="registerFormContainer" style="display:none">
+          <form id="registerForm">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" name="name" placeholder="Your name" required>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" name="email" placeholder="you@company.com" required>
+            </div>
+            <div class="form-group">
+              <label>Password</label>
+              <input type="password" name="password" placeholder="Min. 8 characters" required minlength="8">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Create Account</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DASHBOARD SECTION -->
+  <div id="dashboardSection" style="display:none">
+    <div class="portal-layout">
+      <aside class="portal-sidebar">
+        <div style="padding:0 24px 24px;border-bottom:1px solid var(--border);margin-bottom:16px">
+          <p style="font-size:.75rem;color:var(--text-muted);margin-bottom:4px">Welcome back,</p>
+          <p style="font-weight:700" id="investorName">Investor</p>
+        </div>
+        <ul class="portal-sidebar-nav">
+          <li><a href="#overview" class="active">&#128202; Overview</a></li>
+          <li><a href="#portfolio">&#128200; My Portfolio</a></li>
+          <li><a href="#documents">&#128196; Documents</a></li>
+          <li><a href="#reports">&#128203; Reports</a></li>
+          <li><a href="#settings">&#9881; Settings</a></li>
+          <li><a href="#" id="logoutBtn" style="color:var(--danger)">&#10140; Sign Out</a></li>
+        </ul>
+      </aside>
+      <main class="portal-content">
+        <div class="portal-header">
+          <h1>Investment <span class="gold">Overview</span></h1>
+          <p>Your portfolio performance and fund information at a glance.</p>
+        </div>
+
+        <div class="stats-row" style="margin-bottom:32px">
+          <div class="stat-card"><span class="number">$124.6M</span><span class="label">Total Invested</span></div>
+          <div class="stat-card"><span class="number" style="color:var(--success)">$268.2M</span><span class="label">Current Value</span><span style="color:var(--success);font-size:.8rem">+115.2% IRR</span></div>
+          <div class="stat-card"><span class="number">12</span><span class="label">Active Investments</span></div>
+          <div class="stat-card"><span class="number">3</span><span class="label">Exits Completed</span></div>
+        </div>
+
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:16px">Portfolio Companies</h2>
+        <div class="table-wrap" style="margin-bottom:32px">
+          <table>
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Sector</th>
+                <th>Invested</th>
+                <th>Current Value</th>
+                <th>Return</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="portfolioTableBody">
+              <tr><td colspan="6"><div class="loader"></div></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:16px">Fund Documents</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px;margin-bottom:32px">
+          <div class="card" style="cursor:pointer">
+            <h3 style="font-size:.95rem">&#128196; Fund IV PPM</h3>
+            <p style="font-size:.8rem">Private Placement Memorandum &mdash; March 2025</p>
+          </div>
+          <div class="card" style="cursor:pointer">
+            <h3 style="font-size:.95rem">&#128196; Q2 2026 Quarterly Report</h3>
+            <p style="font-size:.8rem">Performance and portfolio updates &mdash; June 2026</p>
+          </div>
+          <div class="card" style="cursor:pointer">
+            <h3 style="font-size:.95rem">&#128196; Annual Report 2025</h3>
+            <p style="font-size:.8rem">Full year performance and market outlook</p>
+          </div>
+          <div class="card" style="cursor:pointer">
+            <h3 style="font-size:.95rem">&#128196; K-1 Tax Documents</h3>
+            <p style="font-size:.8rem">2025 tax schedule for limited partners</p>
+          </div>
+        </div>
+
+        <h2 style="font-size:1.2rem;font-weight:700;margin-bottom:16px">Recent Activity</h2>
+        <div class="card">
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)">
+            <span style="color:var(--success);font-size:1.2rem">&#9679;</span>
+            <div><p style="font-size:.85rem"><strong>NeuralForge AI</strong> &mdash; Series C closed at $1.2B valuation</p><p style="font-size:.75rem;color:var(--text-muted)">July 15, 2026</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border)">
+            <span style="color:var(--gold);font-size:1.2rem">&#9679;</span>
+            <div><p style="font-size:.85rem"><strong>Q2 2026 Quarterly Report</strong> is now available for download</p><p style="font-size:.75rem;color:var(--text-muted)">July 1, 2026</p></div>
+          </div>
+          <div style="display:flex;gap:16px;align-items:flex-start;padding:12px 0">
+            <span style="color:var(--success);font-size:1.2rem">&#9679;</span>
+            <div><p style="font-size:.85rem"><strong>CarbonZero</strong> &mdash; Announced Fortune 500 partnerships</p><p style="font-size:.75rem;color:var(--text-muted)">May 22, 2026</p></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </div>
+
+  <footer class="footer" style="display:none" id="portalFooter">
+    <div class="container">
+      <div class="footer-bottom">
+        <span>&copy; 2026 Apex Ventures. All rights reserved.</span>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/investor.js"></script>
+</body>
+</html>

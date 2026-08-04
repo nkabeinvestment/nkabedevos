@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Apex Ventures</title>
+  <meta name="description" content="Get in touch with Apex Ventures. Pitch your startup, inquire about investment opportunities, or reach our team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">AV</span>Apex<span class="gold">Ventures</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="investor-portal.html" class="nav-cta">Investor Portal</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Contact</div>
+      <h1>Get In <span class="gold">Touch</span></h1>
+      <p>Have a startup to pitch or want to learn about our investment opportunities? We'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1.2fr 1fr;gap:64px">
+        <div class="fade-left">
+          <span class="section-label">Send a Message</span>
+          <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:24px">Let's Start a Conversation</h2>
+          <form id="contactForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" placeholder="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="john@company.com" required>
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Company</label>
+                <input type="text" name="company" placeholder="Your company name">
+              </div>
+              <div class="form-group">
+                <label>Subject</label>
+                <select name="subject" required>
+                  <option value="">Select a topic</option>
+                  <option value="pitch">Startup Pitch</option>
+                  <option value="investor">Investor Inquiry</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="media">Media Inquiry</option>
+                  <option value="careers">Careers</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Message</label>
+              <textarea name="message" placeholder="Tell us about your company, funding stage, and what you're looking for..." required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg btn-block">Send Message</button>
+          </form>
+        </div>
+        <div class="fade-right">
+          <span class="section-label">Contact Information</span>
+          <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:32px">Reach Us Directly</h2>
+          <div style="margin-bottom:32px">
+            <div class="card" style="margin-bottom:16px">
+              <h3 style="font-size:1rem">&#128205; San Francisco (HQ)</h3>
+              <p>One Market Plaza, 36th Floor<br>San Francisco, CA 94105</p>
+            </div>
+            <div class="card" style="margin-bottom:16px">
+              <h3 style="font-size:1rem">&#128222; Phone</h3>
+              <p><a href="tel:+14155551234" style="color:var(--gold)">+1 (415) 555-1234</a></p>
+            </div>
+            <div class="card" style="margin-bottom:16px">
+              <h3 style="font-size:1rem">&#9993; Email</h3>
+              <p><a href="mailto:hello@apexvc.com" style="color:var(--gold)">hello@apexvc.com</a><br><a href="mailto:pitch@apexvc.com" style="color:var(--gold)">pitch@apexvc.com</a></p>
+            </div>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;margin-bottom:12px">Other Offices</h3>
+            <p style="color:var(--text-muted);font-size:.85rem;line-height:1.8">
+              New York &bull; London &bull; Berlin<br>
+              Singapore &bull; Tokyo &bull; Tel Aviv &bull; S&atilde;o Paulo
+            </p>
+          </div>
+          <div class="map-container" style="margin-top:24px">
+            <p>&#128205; Map placeholder &mdash; integrate Google Maps API</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Newsletter</span>
+        <h2>Stay Updated</h2>
+        <p>Get the latest insights on venture capital, technology trends, and portfolio company news.</p>
+      </div>
+      <form id="newsletterForm" style="display:flex;gap:12px;max-width:480px;margin:0 auto">
+        <input type="email" placeholder="Enter your email" required style="flex:1;padding:14px 16px;background:var(--navy-mid);border:1px solid var(--border);border-radius:var(--radius-sm);color:var(--text-white);font-family:var(--font);font-size:.9rem;outline:none">
+        <button type="submit" class="btn btn-primary">Subscribe</button>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-icon">AV</span>Apex<span class="gold">Ventures</span></a>
+          <p>A leading venture capital firm backing transformative technology companies.</p>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="team.html">Team</a></li><li><a href="news.html">News</a></li></ul></div>
+        <div class="footer-col"><h4>Investors</h4><ul><li><a href="investor-portal.html">Portal Login</a></li><li><a href="#">Fund Documents</a></li><li><a href="#">Quarterly Reports</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Pitch Us</a></li><li><a href="mailto:hello@apexvc.com">hello@apexvc.com</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Apex Ventures. All rights reserved.</span>
+        <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Crunchbase</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/contact.js"></script>
+</body>
+</html>

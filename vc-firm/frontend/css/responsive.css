@@ -1,0 +1,41 @@
+@media(max-width:1024px){
+  .stats-row{grid-template-columns:repeat(2,1fr)}
+  .thesis-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .portal-layout{grid-template-columns:1fr}
+  .portal-sidebar{display:none}
+  .portal-content{padding:24px}
+}
+@media(max-width:768px){
+  .nav-links{position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;background:var(--navy);flex-direction:column;padding:80px 32px 32px;gap:24px;transition:var(--transition);box-shadow:var(--shadow-lg)}
+  .nav-links.open{right:0}
+  .nav-toggle{display:flex}
+  .hero h1{font-size:2.2rem}
+  .hero-stats{flex-direction:column;gap:24px}
+  .hero-stat{display:flex;align-items:center;gap:12px}
+  .hero-stat .number{font-size:1.6rem}
+  .stats-row{grid-template-columns:1fr}
+  .thesis-grid{grid-template-columns:1fr}
+  .form-row{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .footer-bottom{flex-direction:column;gap:12px;text-align:center}
+  .portfolio-grid{grid-template-columns:1fr}
+  .news-grid{grid-template-columns:1fr}
+  .team-grid{grid-template-columns:1fr}
+  .section{padding:60px 0}
+  .page-header{padding:120px 0 40px}
+  .timeline::before{left:20px}
+  .timeline-dot{left:20px}
+  .timeline-item,.timeline-item:nth-child(even){flex-direction:column;padding-left:48px;gap:0}
+  .timeline-content{width:100%}
+  .filter-tabs{gap:6px}
+  .filter-tab{padding:6px 14px;font-size:.75rem}
+}
+@media(max-width:480px){
+  .container{padding:0 16px}
+  .hero-actions{flex-direction:column}
+  .hero-actions .btn{width:100%}
+  .auth-card{padding:24px}
+  .modal{padding:24px}
+  .section-header h2{font-size:1.6rem}
+}

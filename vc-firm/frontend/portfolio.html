@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio | Apex Ventures</title>
+  <meta name="description" content="Explore Apex Ventures' portfolio of 150+ companies across AI, FinTech, HealthTech, and Climate Tech.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <nav class="nav">
+    <div class="container nav-inner">
+      <a href="index.html" class="nav-logo"><span class="logo-icon">AV</span>Apex<span class="gold">Ventures</span></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="team.html">Team</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="investor-portal.html" class="nav-cta">Investor Portal</a></li>
+      </ul>
+      <div class="nav-toggle"><span></span><span></span><span></span></div>
+    </div>
+  </nav>
+
+  <div class="page-header">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> &rsaquo; Portfolio</div>
+      <h1>Our <span class="gold">Portfolio</span></h1>
+      <p>150+ companies across four core sectors, from seed to growth stage.</p>
+    </div>
+  </div>
+
+  <section class="section section-dark">
+    <div class="container">
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="ai">AI</button>
+        <button class="filter-tab" data-filter="fintech">FinTech</button>
+        <button class="filter-tab" data-filter="healthtech">HealthTech</button>
+        <button class="filter-tab" data-filter="climate">Climate</button>
+      </div>
+      <div class="portfolio-grid" id="portfolioGrid"></div>
+    </div>
+  </section>
+
+  <div class="modal-overlay" id="companyModal">
+    <div class="modal" style="position:relative">
+      <button class="modal-close" onclick="document.getElementById('companyModal').classList.remove('open')">&times;</button>
+      <span class="section-label" id="modalCompanySector"></span>
+      <h2 id="modalCompanyName" style="font-size:1.8rem;font-weight:800;margin-bottom:12px"></h2>
+      <p id="modalCompanyDesc" style="color:var(--text-muted);margin-bottom:24px;line-height:1.7"></p>
+      <div class="stats-row" style="grid-template-columns:repeat(3,1fr);margin-bottom:0">
+        <div class="stat-card"><span class="number" style="font-size:1.6rem" id="modalCompanyYear">2023</span><span class="label">Year Invested</span></div>
+        <div class="stat-card"><span class="number" style="font-size:1.6rem" id="modalCompanyInvested">$12M</span><span class="label">Amount Invested</span></div>
+        <div class="stat-card"><span class="number" style="font-size:1.6rem" id="modalCompanyValuation">$180M</span><span class="label">Current Valuation</span></div>
+      </div>
+    </div>
+  </div>
+
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="fade-up">Building the <span class="gold">Future</span></h2>
+      <p class="fade-up fade-up-delay-1">Looking to raise your Series A or B? We're actively investing in exceptional founders.</p>
+      <div class="fade-up fade-up-delay-2">
+        <a href="contact.html" class="btn btn-primary btn-lg">Pitch Your Company</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><span class="logo-icon">AV</span>Apex<span class="gold">Ventures</span></a>
+          <p>A leading venture capital firm backing transformative technology companies.</p>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="about.html">About</a></li><li><a href="portfolio.html">Portfolio</a></li><li><a href="team.html">Team</a></li><li><a href="news.html">News</a></li></ul></div>
+        <div class="footer-col"><h4>Investors</h4><ul><li><a href="investor-portal.html">Portal Login</a></li><li><a href="#">Fund Documents</a></li><li><a href="#">Quarterly Reports</a></li></ul></div>
+        <div class="footer-col"><h4>Contact</h4><ul><li><a href="contact.html">Pitch Us</a></li><li><a href="mailto:hello@apexvc.com">hello@apexvc.com</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Apex Ventures. All rights reserved.</span>
+        <div class="footer-socials"><a href="#">LinkedIn</a><a href="#">Twitter</a><a href="#">Crunchbase</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="scroll-top" aria-label="Scroll to top">&uarr;</button>
+  <script src="js/api.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/portfolio.js"></script>
+</body>
+</html>
