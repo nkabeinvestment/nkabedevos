@@ -33,6 +33,8 @@ img{max-width:100%;height:auto}
 .nav-logo .accent{color:var(--accent)}
 .nav-links{display:flex;align-items:center;gap:28px;list-style:none}
 .nav-links a{color:rgba(255,255,255,.8);font-size:.88rem;font-weight:500;transition:var(--transition);position:relative}
+.nav.scrolled .nav-logo{color:var(--text-dark)}
+.nav.scrolled .nav-logo .accent{color:var(--accent-dark)}
 .nav.scrolled .nav-links a{color:var(--text-body)}
 .nav-links a:hover,.nav-links a.active{color:var(--accent)}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--accent);transition:var(--transition)}
