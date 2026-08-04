@@ -98,6 +98,8 @@ img{max-width:100%;height:auto}
 /* PORTFOLIO GRID */
 .portfolio-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:24px}
 .portfolio-card{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:4/3;cursor:pointer}
+.portfolio-card-logo{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:var(--navy-mid);padding:20px}
+.portfolio-card-logo svg{width:100%;height:100%;max-width:160px;max-height:160px}
 .portfolio-card img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}
 .portfolio-card:hover img{transform:scale(1.05)}
 .portfolio-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(10,22,40,.95),rgba(10,22,40,.3),transparent);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;opacity:0;transition:var(--transition)}
