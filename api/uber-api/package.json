@@ -1,0 +1,13 @@
+{
+  "name": "uber-clone-api",
+  "version": "1.0.0",
+  "description": "Node/Express mock API for the RideNow ride-hailing demo",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

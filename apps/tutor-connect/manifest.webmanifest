@@ -1,0 +1,17 @@
+{
+  "name": "StudyMate — Tutor & Student Connect",
+  "short_name": "StudyMate",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f6f6f9",
+  "theme_color": "#4f46e5",
+  "description": "University tutor-student matching demo app built with React.",
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

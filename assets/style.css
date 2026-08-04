@@ -78,6 +78,7 @@ h2 { font-size: 1.6rem; margin: 0 0 8px; }
 .react { background: #22d3ee22; color: #38bdf8; }
 .node { background: #16a34a22; color: #4ade80; }
 .shop { background: #e879f922; color: #f0abfc; }
+.mobile { background: #34d39922; color: #6ee7b7; }
 
 .btn {
   display: inline-block;

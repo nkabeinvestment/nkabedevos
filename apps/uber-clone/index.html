@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>RideNow — Ride-Hailing Demo</title>
+  <meta name="description" content="Uber-style ride-hailing demo app built with React — request a ride, track the driver, and view your history." />
+  <meta name="theme-color" content="#000000" />
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="root"></div>
+
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <script type="text/babel" data-presets="react">
+    const { useState, useEffect } = React;
+
+    const API = "http://localhost:3001";
+    const FALLBACK = {
+      vehicles: [
+        { id: "x", name: "Ride X", cap: 4, eta: 3, price: 12.5, icon: "🚗", desc: "Affordable everyday rides" },
+        { id: "comfort", name: "Comfort", cap: 4, eta: 5, price: 18.0, icon: "🚘", desc: "Newer cars, extra legroom" },
+        { id: "xl", name: "XL", cap: 6, eta: 7, price: 26.0, icon: "🚙", desc: "Room for 6, great for groups" },
+      ],
+    };
+
+    const PLACES = ["Central Station", "City Mall", "Riverside Park", "University Campus", "Airport Terminal 2"];
+
+    const DRIVER = { name: "Dennis M.", car: "Toyota Corolla · Silver", plate: "KCL 123A", rating: 4.9, eta: 3 };
+
+    function loadVehicles(cb) {
+      fetch(API + "/api/vehicles")
+        .then((r) => (r.ok ? r.json() : Promise.reject()))
+        .then((v) => (Array.isArray(v) && v.length ? cb(v) : cb(FALLBACK.vehicles)))
+        .catch(() => cb(FALLBACK.vehicles));
+    }
+
+    function App() {
+      const [view, setView] = useState("home");
+      const [vehicles, setVehicles] = useState(FALLBACK.vehicles);
+      const [dest, setDest] = useState("");
+      const [vehicle, setVehicle] = useState("x");
+      const [phase, setPhase] = useState(null); // searching | assigned | active | completed
+      const [history, setHistory] = useState(loadHistory());
+
+      useEffect(() => { loadVehicles((v) => setVehicles(v)); }, []);
+
+      const selected = vehicles.find((v) => v.id === vehicle) || vehicles[0];
+      const fare = selected ? selected.price.toFixed(2) : "—";
+
+      function requestRide() {
+        if (!dest.trim()) { setPhase("nodest"); return; }
+        setPhase("searching");
+        setTimeout(() => setPhase("assigned"), 1800);
+        setTimeout(() => setPhase("active"), 5200);
+        setTimeout(() => setPhase("completed"), 8800);
+      }
+
+      function finishRide() {
+        const rec = {
+          id: "RID-" + Date.now().toString(36).toUpperCase(),
+          from: "Current location",
+          to: dest.trim(),
+          vehicle: selected.name,
+          fare: Number(fare),
+          time: new Date().toISOString(),
+        };
+        const h = [rec, ...loadHistory()].slice(0, 20);
+        localStorage.setItem("ridenow_history", JSON.stringify(h));
+        setHistory(h);
+        setPhase(null);
+        setDest("");
+        setView("home");
+      }
+
+      function loadHistory() {
+        try { return JSON.parse(localStorage.getItem("ridenow_history")) || []; } catch { return []; }
+      }
+
+      return (
+        <div className="app">
+          <Header view={view} setView={setView} />
+
+          {view === "home" && (
+            <Home
+              vehicles={vehicles}
+              vehicle={vehicle}
+              setVehicle={setVehicle}
+              dest={dest}
+              setDest={setDest}
+              fare={fare}
+              selected={selected}
+              onRequest={requestRide}
+              phase={phase}
+            />
+          )}
+
+          {view === "history" && <History rows={history} />}
+          {view === "profile" && <Profile />}
+
+          <BottomNav view={view} setView={setView} />
+
+          <BookingOverlay phase={phase} fare={fare} dest={dest} onFinish={finishRide} onCancel={() => setPhase(null)} />
+        </div>
+      );
+    }
+
+    function Header({ view, setView }) {
+      return (
+        <header className="top">
+          <div className="logo">⛓️ RideNow</div>
+          <button className="ghost-btn" onClick={() => setView(view === "profile" ? "home" : "profile")}>
+            👤
+          </button>
+        </header>
+      );
+    }
+
+    function Map({ dest, active }) {
+      return (
+        <div className="map">
+          <svg className="route" viewBox="0 0 300 140" preserveAspectRatio="none">
+            <path d="M18 122 C 70 122, 70 30, 150 30 S 250 60, 282 22" fill="none" stroke="#1e1e2e" strokeWidth="10" opacity="0.25" />
+            <path d="M18 122 C 70 122, 70 30, 150 30 S 250 60, 282 22" fill="none" stroke="#3aa0ff" strokeWidth="3.5" strokeDasharray="6 7" />
+          </svg>
+          <div className="pin pick">📍</div>
+          <div className="pin drop">🏁</div>
+          <div className="car-dot" style={{ opacity: active ? 1 : 0.25 }}>🚗</div>
+          <div className="map-label" style={{ left: 8, top: 96 }}>You</div>
+          <div className="map-label" style={{ right: 6, top: 6 }}>{dest || "Destination"}</div>
+        </div>
+      );
+    }
+
+    function Home({ vehicles, vehicle, setVehicle, dest, setDest, fare, selected, onRequest, phase }) {
+      return (
+        <main className="content">
+          <Map dest={dest} active={phase === "active"} />
+
+          <section className="card">
+            <label className="lbl">Destination</label>
+            <input
+              className="input"
+              placeholder="Where to?"
+              value={dest}
+              onChange={(e) => setDest(e.target.value)}
+            />
+            <div className="chips">
+              {PLACES.map((p) => (
+                <button key={p} className={dest === p ? "chip on" : "chip"} onClick={() => setDest(p)}>{p}</button>
+              ))}
+            </div>
+          </section>
+
+          <section className="card">
+            <div className="sec-title">Choose a ride</div>
+            {vehicles.map((v) => (
+              <button key={v.id} className={vehicle === v.id ? "veh on" : "veh"} onClick={() => setVehicle(v.id)}>
+                <span className="veh-icon">{v.icon}</span>
+                <span className="veh-info">
+                  <strong>{v.name}</strong>
+                  <small>{v.desc} · ~{v.eta} min away</small>
+                </span>
+                <span className="veh-price">${v.price.toFixed(2)}</span>
+              </button>
+            ))}
+          </section>
+
+          <button className="cta" onClick={onRequest} disabled={phase === "searching"}>
+            {phase === "searching" ? "Finding your driver…" : "Request " + (selected ? selected.name : "")}
+          </button>
+          {phase === "nodest" && <p className="err">Enter a destination to continue.</p>}
+        </main>
+      );
+    }
+
+    function BookingOverlay({ phase, fare, dest, onFinish, onCancel }) {
+      if (!phase) return null;
+      return (
+        <div className="overlay">
+          <div className="sheet">
+            <button className="sheet-x" onClick={onCancel}>✕</button>
+            {phase === "searching" && (
+              <div className="center">
+                <div className="spinner" />
+                <h3>Finding your driver</h3>
+                <p className="muted">Connecting you with the nearest RideNow vehicle…</p>
+              </div>
+            )}
+            {phase === "assigned" && (
+              <div className="center">
+                <div className="driver-av">👨‍✈️</div>
+                <h3>{DRIVER.name} is on the way</h3>
+                <p className="muted">{DRIVER.car}</p>
+                <p className="plate">{DRIVER.plate} · ⭐ {DRIVER.rating}</p>
+                <p className="eta-chip">Arriving in ~{DRIVER.eta} min</p>
+              </div>
+            )}
+            {phase === "active" && (
+              <div className="center">
+                <div className="driver-av">🚘</div>
+                <h3>You're on the road</h3>
+                <p className="muted">Heading to {dest}</p>
+                <div className="progress"><div className="bar" /></div>
+              </div>
+            )}
+            {phase === "completed" && (
+              <div className="center">
+                <div className="done">✅</div>
+                <h3>Ride complete</h3>
+                <div className="fare-box">
+                  <span>Total fare</span>
+                  <strong>${fare}</strong>
+                </div>
+                <p className="muted">Rate {DRIVER.name} ⭐⭐⭐⭐⭐</p>
+                <button className="cta" onClick={onFinish}>Done</button>
+              </div>
+            )}
+          </div>
+        </div>
+      );
+    }
+
+    function History({ rows }) {
+      return (
+        <main className="content">
+          <h2 className="page-title">Your Trips</h2>
+          {!rows.length && <p className="muted">No trips yet — request your first ride!</p>}
+          {rows.map((r) => (
+            <div key={r.id} className="trip">
+              <div className="trip-icon">🚗</div>
+              <div className="trip-body">
+                <strong>{r.to}</strong>
+                <small>{r.vehicle} · {new Date(r.time).toLocaleString()}</small>
+              </div>
+              <div className="trip-fare">${r.fare}</div>
+            </div>
+          ))}
+        </main>
+      );
+    }
+
+    function Profile() {
+      return (
+        <main className="content">
+          <div className="avatar">👤</div>
+          <h2 className="page-title">Demo Profile</h2>
+          <p className="muted">This is a demo. Payment and profile data are stored in your browser only.</p>
+          <div className="mini-list">
+            <div className="mini"><span>Payment</span><span>Visa •••• 4242</span></div>
+            <div className="mini"><span>Mode</span><span>Cash 💵</span></div>
+            <div className="mini"><span>App version</span><span>1.0.0</span></div>
+          </div>
+        </main>
+      );
+    }
+
+    function BottomNav({ view, setView }) {
+      return (
+        <nav className="bottom">
+          <button className={view === "home" ? "on" : ""} onClick={() => setView("home")}>🏠<span>Home</span></button>
+          <button className={view === "history" ? "on" : ""} onClick={() => setView("history")}>🧾<span>Trips</span></button>
+          <button className={view === "profile" ? "on" : ""} onClick={() => setView("profile")}>👤<span>Profile</span></button>
+        </nav>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById("root")).render(<App />);
+  </script>
+
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+    }
+  </script>
+</body>
+</html>
